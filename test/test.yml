@@ -21,4 +21,5 @@ jobs:
             mv test/main.go server/main.go
             mv test/golangci.yml server/.golangci.yml
       - golangci-lint/lint:
+          checkout: false
           working-directory: server
