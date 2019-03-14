@@ -1,7 +1,9 @@
 description: >
   Lint the Go project with golangci-lint
 
-executor: golangci
+executor: 
+  name: golangci
+  tag: << parameters.tag >>
 
 parameters:
   working-directory:
@@ -29,6 +31,10 @@ parameters:
     description: directory path list of the lint target
     type: string
     default: "./..."
+  tag:
+    description: tag of the docker image of `golangci/golangci-lint`
+    type: string
+    default: latest
 
 steps:
   - lint:

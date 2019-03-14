@@ -3,7 +3,7 @@ version: "2.1"
 executors:
   default:
     docker:
-      - image: golangci/golangci-lint
+      - image: golangci/golangci-lint:latest
     environment:
       - GO111MODULE: "on"
 
