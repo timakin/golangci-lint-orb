@@ -39,5 +39,5 @@ steps:
             at: << parameters.workspace-root >>
   - run:
       name: Run goalngci-lint
-      command: |
-        golangci-lint run << parameters.directories >>
+      working_directory: << parameters.working-directory >>
+      command: golangci-lint run << parameters.directories >>
