@@ -1,7 +1,7 @@
 description: >
   Lint the Go project with golangci-lint
 
-executor: 
+executor:
   name: golangci
   tag: << parameters.tag >>
 
