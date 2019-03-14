@@ -20,6 +20,9 @@ jobs:
             mv test/go.sum server/go.sum
             mv test/main.go server/main.go
             mv test/golangci.yml server/.golangci.yml
+            cd server
+            go mod download
+            go mod vendor
       - golangci-lint/lint:
           checkout: false
           working-directory: server
