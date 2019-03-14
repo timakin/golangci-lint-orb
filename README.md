@@ -1,2 +1,5 @@
 # golangci-lint-orb
-CircleCI Orb for [golangci-lint](https://github.com/golangci/golangci-lint)
+
+[![CircleCI](https://circleci.com/gh/timakin/golangci-lint-orb.svg?style=svg)](https://circleci.com/gh/timakin/golangci-lint-orb)
+
+The yaml sources for the CircleCI orbs.

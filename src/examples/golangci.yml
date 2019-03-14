@@ -1,0 +1,12 @@
+description: "Usage of timakin/golangci-lint orb"
+
+usage:
+  version: 2.1
+
+  orbs:
+    reviewdog: timakin/golangci-lint@volatile
+
+  workflows:
+    build:
+      jobs:
+        - golangci-lint/lint
