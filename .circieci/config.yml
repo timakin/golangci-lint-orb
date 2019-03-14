@@ -31,21 +31,21 @@ workflows:
           orb-name: timakin/golangci-lint
           requires:
             - orb-tools/pack
-      # - orb-tools/trigger-integration-workflow:
-      #     ssh-fingerprints: 95:0b:a2:cf:bd:98:4c:ab:0c:0f:0c:5a:f4:72:d1:bd
-      #     requires:
-      #       - orb-tools/publish-dev
-      #     filters:
-      #       branches:
-      #         ignore: master
-      # - orb-tools/trigger-integration-workflow:
-      #     ssh-fingerprints: 95:0b:a2:cf:bd:98:4c:ab:0c:0f:0c:5a:f4:72:d1:bd
-      #     tag: master
-      #     requires:
-      #       - orb-tools/publish-dev
-      #     filters:
-      #       branches:
-      #         only: master
+      - orb-tools/trigger-integration-workflow:
+          ssh-fingerprints: 7a:48:00:0c:91:d3:c5:95:36:f1:3c:5d:ed:e3:94:89
+          requires:
+            - orb-tools/publish-dev
+          filters:
+            branches:
+              ignore: master
+      - orb-tools/trigger-integration-workflow:
+          ssh-fingerprints: 7a:48:00:0c:91:d3:c5:95:36:f1:3c:5d:ed:e3:94:89
+          tag: master
+          requires:
+            - orb-tools/publish-dev
+          filters:
+            branches:
+              only: master
 
   integration-tests_prod-release:
     jobs:
