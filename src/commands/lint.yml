@@ -38,10 +38,6 @@ steps:
         - attach_workspace:
             at: << parameters.workspace-root >>
   - run:
-      name: Move the command to bin dir
-      command: |
-        mv /go/bin/golangci-lint /bin/golangci-lint
-  - run:
       name: Run goalngci-lint
       command: |
         golangci-lint run << parameters.directories >>
