@@ -13,9 +13,9 @@ func main() {
 	r := chi.NewRouter()
 	r.HandleFunc("/", RootHandler)
 	http.Handle("/", r)
-	http.ListenAndServe("0.0.0.0:8080", r)
+	_ = http.ListenAndServe("0.0.0.0:8080", r)
 }
 func RootHandler(writer http.ResponseWriter, request *http.Request) {
-	io.WriteString(writer, "Hello World!")
+	_, _ = io.WriteString(writer, "Hello World!")
 	logrus.Info(request.RemoteAddr)
 }
