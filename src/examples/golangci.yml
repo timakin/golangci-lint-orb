@@ -4,7 +4,7 @@ usage:
   version: 2.1
 
   orbs:
-    reviewdog: timakin/golangci-lint@volatile
+    golangci-lint: timakin/golangci-lint@volatile
 
   workflows:
     build:
