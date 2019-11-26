@@ -1,4 +1,4 @@
-description: "Runs the goalngci-lint"
+description: "Runs the golangci-lint"
 
 parameters:
   checkout:
@@ -38,6 +38,6 @@ steps:
         - attach_workspace:
             at: << parameters.workspace-root >>
   - run:
-      name: Run goalngci-lint
+      name: Run golangci-lint
       working_directory: << parameters.working-directory >>
       command: golangci-lint run << parameters.directories >>
